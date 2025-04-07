@@ -1,5 +1,5 @@
 {% set name = "lale" %}
-{% set version = "0.8.4" %}
+{% set version = "0.9.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/lale-{{ version }}.tar.gz
-  sha256: f3c0005dd5ebabf4995c3465ca3beeda6cc63e8af46ecfce663295062bccfa92
+  sha256: b7b60cdfffe454522a21c0e569e9ea86574e3f602a7208f8f8b424af5bc727fa
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 0
 
 requirements:
   host:
