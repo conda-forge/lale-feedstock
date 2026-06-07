@@ -22,6 +22,7 @@ requirements:
   run:
     - python >={{ python_min }}
     - numpy
+    - setuptools >=61.0,<82.0
     - black >=22.1.0
     - python-graphviz
     - hyperopt >=0.2,<=0.2.5
