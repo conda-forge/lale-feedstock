@@ -1,5 +1,5 @@
 {% set name = "lale" %}
-{% set version = "0.9.5" %}
+{% set version = "0.9.6" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/lale-{{ version }}.tar.gz
-  sha256: 3cb1b1b8865f2c84be12f1e0f1267b46403405aa3fe5ed031e49447b554df4e9
+  sha256: d02ba86d548a8d2924932581fada356013db1e835cc50f6e154be721b6d88b71
 
 build:
   noarch: python
@@ -22,18 +22,17 @@ requirements:
   run:
     - python >={{ python_min }}
     - numpy
-    - setuptools >=61.0,<82.0
+    - setuptools >=61.0
     - black >=22.1.0
     - python-graphviz
-    - hyperopt >=0.2,<=0.2.5
-    - jsonschema <=4.20.0
+    - hyperopt >=0.2,<0.4
+    - jsonschema <=5
     - jsonsubschema >=0.0.6
-    - scikit-learn >=1.0.0,<1.5.0
+    - scikit-learn >=1.0.0,<1.8.0
     - scipy
     - pandas
     - packaging
     - decorator
-    - astunparse
     - typing-extensions
 
 test:
